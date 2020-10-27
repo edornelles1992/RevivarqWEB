@@ -31,7 +31,6 @@ class ReformForm extends React.Component {
 			photos: [],
 			establishmentName: '',
 			establishmentType: '',
-			establishmentName: '',
 			goal: '',
 			status: '',
 			area: '',
