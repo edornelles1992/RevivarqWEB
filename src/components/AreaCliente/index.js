@@ -105,11 +105,24 @@ export default class SwitchListSecondary extends React.Component {
 		}
 		else {
 			showNotification(updateUser.data.message)
+			//FIX - Campos editaveis
+			var estado = this.state.trocaBotao
+			if (estado) {
+				this.setState({
+					trocaBotao: false,
+					abreEdicao: false,
+					disabled: false
+				})
+			}
+			else {
+				this.setState({
+					trocaBotao: true,
+					abreEdicao: true,
+					disabled: true
+				})
+			}
 			return true
-		}
-
-
-
+		}		
 	}
 
 	renderContent(reform, index) {
@@ -129,7 +142,7 @@ export default class SwitchListSecondary extends React.Component {
 				<TableCell align="right" style={{borderBottomRightRadius:"15px"}}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
 			</TableRow>
 		)
-	}
+	}	
 
 
 	handleClickvoltar() {
