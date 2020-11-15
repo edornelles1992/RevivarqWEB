@@ -28,13 +28,13 @@ const styles = theme => ({
 		width: '100%',
 		marginTop: 100,
 		overflowX: 'auto',
-		borderRadius:"55px",
+		borderRadius: "55px",
 	},
 	table: {
 		minWidth: 650,
-		borderBottomRightRadius:"15px",
-		border:"15px",
-		marginBottom:"15px",
+		borderBottomRightRadius: "15px",
+		border: "15px",
+		marginBottom: "15px",
 	},
 	tableWrapper: {
 		maxHeight: 440,
@@ -122,7 +122,7 @@ export default class SwitchListSecondary extends React.Component {
 				})
 			}
 			return true
-		}		
+		}
 	}
 
 	renderContent(reform, index) {
@@ -134,15 +134,15 @@ export default class SwitchListSecondary extends React.Component {
 		//console.log(reform)
 		return (
 			<TableRow key={reform.id}>
-				<TableCell component="th" style={{borderBottomLeftRadius:"15px"}} scope="row">{reform.establishmentName}</TableCell>
+				<TableCell component="th" style={{ borderBottomLeftRadius: "15px" }} scope="row">{reform.establishmentName}</TableCell>
 				<TableCell align="right">R$ {toMoneyConversion(reform.budgetLimit)}</TableCell>
 				<TableCell align="right">{reform.establishmentType}</TableCell>
 				<TableCell align="right">{reform.status}</TableCell>
 				<TableCell align="right"><SearchIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.setState({ openedReformIndex: index })} /></TableCell>
-				<TableCell align="right" style={{borderBottomRightRadius:"15px"}}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
+				<TableCell align="right" style={{ borderBottomRightRadius: "15px" }}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
 			</TableRow>
 		)
-	}	
+	}
 
 
 	handleClickvoltar() {
@@ -204,25 +204,25 @@ export default class SwitchListSecondary extends React.Component {
 							Perfil
 					</Typography>
 					</div>
-					<Paper className={classes.root} style={{ margin: 60,borderRadius:"15px" }} >
-						<Table className={classes.table} style={{'border-collapse': 'separate','border-radius': '15px'}}>
+					<Paper className={classes.root} style={{ margin: 60, borderRadius: "15px" }} >
+						<Table className={classes.table} style={{ 'border-collapse': 'separate', 'border-radius': '15px' }}>
 							<TableHead style={{ backgroundColor: "rgb(255,248,41)" }}>
 								<TableRow>
-									<TableCell style={{borderTopLeftRadius:"15px", fontSize:"20px"}}>Detalhes do Usuário</TableCell>
-									<TableCell style={{ alignItems: 'center' }} style={{borderTopRightRadius:"15px"}}>
+									<TableCell style={{ borderTopLeftRadius: "15px", fontSize: "20px" }}>Detalhes do Usuário</TableCell>
+									<TableCell style={{ alignItems: 'center' }} style={{ borderTopRightRadius: "15px" }}>
 										{this.state.trocaBotao
 											?
 											<Typography>
 												<TableCell>
-													
+
 													<BlockIcon style={{ fontWeight: 'bold' }} onClick={(e) => this.trocaBotao(e)} ></BlockIcon>
 												</TableCell>
 											</Typography>
 											:
 											<Typography>
 												<TableCell>
-													
-										 <EditIcon style={{ cursor: 'pointer', align: 'right', marginLeft: 10, color: 'rgb(21,38,32)' }} onClick={(e) => this.abreEdicao(e)}></EditIcon>
+
+													<EditIcon style={{ cursor: 'pointer', align: 'right', marginLeft: 10, color: 'rgb(21,38,32)' }} onClick={(e) => this.abreEdicao(e)}></EditIcon>
 												</TableCell>
 											</Typography>
 										}
@@ -232,7 +232,7 @@ export default class SwitchListSecondary extends React.Component {
 							<TableBody>
 								<TableRow>
 									<TableCell align="left">
-										<Typography style={{fontSize:"18px"}} >
+										<Typography style={{ fontSize: "18px" }} >
 											Nome:<br></br>
 											<TextField
 												disabled={!this.state.abreEdicao}
@@ -250,7 +250,7 @@ export default class SwitchListSecondary extends React.Component {
 								</TableRow>
 								<TableRow>
 									<TableCell align="left">
-										<Typography style={{fontSize:"18px"}}>
+										<Typography style={{ fontSize: "18px" }}>
 											Sobrenome:<br></br>
 											<TextField
 												disabled={!this.state.abreEdicao}
@@ -266,7 +266,7 @@ export default class SwitchListSecondary extends React.Component {
 								</TableRow>
 								<TableRow>
 									<TableCell align="left">
-										<Typography style={{fontSize:"18px"}}>
+										<Typography style={{ fontSize: "18px" }}>
 											Celular:<br></br>
 											<TextField
 												disabled={!this.state.abreEdicao}
@@ -282,7 +282,7 @@ export default class SwitchListSecondary extends React.Component {
 								</TableRow>
 								<TableRow>
 									<TableCell align="left">
-										<Typography style={{fontSize:"18px"}}>
+										<Typography style={{ fontSize: "18px" }}>
 											CPF:<br></br>
 											<TextField
 												disabled={!this.state.abreEdicao}
@@ -298,7 +298,7 @@ export default class SwitchListSecondary extends React.Component {
 								</TableRow>
 								<TableRow>
 									<TableCell align="left">
-										<Typography style={{fontSize:"18px"}}>
+										<Typography style={{ fontSize: "18px" }}>
 											CNPJ:<br></br>
 											<TextField
 												disabled={!this.state.abreEdicao}
@@ -314,20 +314,20 @@ export default class SwitchListSecondary extends React.Component {
 								</TableRow>
 								<TableRow>
 									<TableCell className="table-row" align="left">
-											<Typography style={{ marginTop: '2px',fontSize:"18px"}}>
-											Estado Civil:<br/><br/>
-												<Select disabled={!this.state.abreEdicao} onChange={e => this.setState({ user: { ...user, civilStatus: e.target.value } })} labelId="label" id="select" style={{ width: '200px' }} value={this.state.user.civilStatus || ""}>
-													<MenuItem value="Solteiro(a)">Solteiro(a)</MenuItem>
-													<MenuItem value="Casado(a)">Casado(a)</MenuItem>
-													<MenuItem value="Divorciado(a)">Divorciado(a)</MenuItem>
-													<MenuItem value="Viúvo(a)">Viúvo(a)</MenuItem>
-													<MenuItem value="Separado(a)">Separado(a)</MenuItem>
-												</Select>
-											</Typography>
+										<Typography style={{ marginTop: '2px', fontSize: "18px" }}>
+											Estado Civil:<br /><br />
+											<Select disabled={!this.state.abreEdicao} onChange={e => this.setState({ user: { ...user, civilStatus: e.target.value } })} labelId="label" id="select" style={{ width: '200px' }} value={this.state.user.civilStatus || ""}>
+												<MenuItem value="Solteiro(a)">Solteiro(a)</MenuItem>
+												<MenuItem value="Casado(a)">Casado(a)</MenuItem>
+												<MenuItem value="Divorciado(a)">Divorciado(a)</MenuItem>
+												<MenuItem value="Viúvo(a)">Viúvo(a)</MenuItem>
+												<MenuItem value="Separado(a)">Separado(a)</MenuItem>
+											</Select>
+										</Typography>
 									</TableCell>
 								</TableRow>
 								<TableRow >
-									<TableCell style={{borderBottomLeftRadius:"15px"}}>
+									<TableCell style={{ borderBottomLeftRadius: "15px" }}>
 										{this.state.abreEdicao
 											?
 											<Button type='submit' style={{ color: 'white', backgroundColor: "rgb(21,38,32)" }} onClick={this.handleSubmit}>Atualizar Dados</Button>
@@ -347,23 +347,23 @@ export default class SwitchListSecondary extends React.Component {
 						</Typography>
 					</div>
 					<div className={classes.tableWrapper}>
-						<Paper className={classes.root} style={{ margin: 10, borderRadius:"15px" }} >
-							<Table className={classes.table} style={{'border-collapse': 'separate','border-radius': '15px'}}>
+						<Paper className={classes.root} style={{ margin: 10, borderRadius: "15px" }} >
+							<Table className={classes.table} style={{ 'border-collapse': 'separate', 'border-radius': '15px' }}>
 								<TableHead style={{ backgroundColor: "rgb(255,248,41)" }}>
 									<TableRow>
-										<TableCell style={{fontSize:15}} className="table-row"><b>Nome Estabelecimento</b></TableCell>
-										<TableCell style={{fontSize:15}} align="left"><b>Orçamento Limite</b></TableCell> {/* estava Nome Solicitação, troquei para orçamento limite pois n entendi qual campo era esse e n tem nenhum parecido que volte nessa chamada */}
-										<TableCell style={{fontSize:15}} align="left"><b>Tipo do Estabelicimento</b></TableCell>
-										<TableCell style={{fontSize:15}} align="left"><b>Status</b></TableCell>
-										<TableCell style={{fontSize:15}} align="left"><b></b></TableCell>
-										<TableCell style={{fontSize:15}} align="left" style={{borderTopRightRadius:"15px"}}><b></b></TableCell>
+										<TableCell style={{ fontSize: 15 }} className="table-row"><b>Nome Estabelecimento</b></TableCell>
+										<TableCell style={{ fontSize: 15 }} align="left"><b>Orçamento Limite</b></TableCell> {/* estava Nome Solicitação, troquei para orçamento limite pois n entendi qual campo era esse e n tem nenhum parecido que volte nessa chamada */}
+										<TableCell style={{ fontSize: 15 }} align="left"><b>Tipo do Estabelicimento</b></TableCell>
+										<TableCell style={{ fontSize: 15 }} align="left"><b>Status</b></TableCell>
+										<TableCell style={{ fontSize: 15 }} align="left"><b></b></TableCell>
+										<TableCell style={{ fontSize: 15 }} align="left" style={{ borderTopRightRadius: "15px" }}><b></b></TableCell>
 									</TableRow>
 								</TableHead>
 								<TableBody>
 									{this.state.reforms.map((reform, index) => this.renderContent(reform, index))}
 								</TableBody>
 							</Table>
-							{this.state.openedReformIndex !== -1 && <ReformaDetalhe reform={this.state.reforms[this.state.openedReformIndex]} closeDetail={this.closeDetail} tipoUsuario={1}/>}
+							{this.state.openedReformIndex !== -1 && <ReformaDetalhe reform={this.state.reforms[this.state.openedReformIndex]} closeDetail={this.closeDetail} tipoUsuario={1} />}
 							{!isLoading && reforms.length === 0 &&
 								<div style={{ minHeight: '100px', justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
 									<h2 style={{ textAlign: 'center' }}>
@@ -375,9 +375,9 @@ export default class SwitchListSecondary extends React.Component {
 					</div>
 				</div>
 				<div>
-					<div style={{ marginTop: 40, color: "rgb(255,248,41)", fontSize: 40, fontFamily: 'Playfair Display' }}>
-				<Chat name={sessionStorage.getItem('user')} />
-				</div>
+					<div style={{ padding: 10, marginTop: 100, color: "rgb(255,248,41)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(255,248,41)" }}>
+						<Chat style={{ width: '300px', height: '330px'}}name={sessionStorage.getItem('user')} />
+					</div>
 				</div>
 			</div>
 		)

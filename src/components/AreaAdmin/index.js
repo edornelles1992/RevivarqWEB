@@ -15,6 +15,7 @@ import { showNotification } from 'components/Notification';
 import { Constants } from '../../configs/constants';
 import { Search as SearchIcon } from '@material-ui/icons';
 import ReformaDetalhe from '../ReformaDetalhe';
+import Chat from '../../components/Chat/Chat'
 
 const styles = theme => ({
 	root: {
@@ -126,6 +127,11 @@ export default class AreaAdminComponent extends React.Component {
 						</div>
 					}
 				</Paper >
+				<div style={{  display: 'flex', alignItems: 'center', justifyContent: "center", alignContent: "center"}}>
+					<div style={{ width: "500px", padding: 10, color: "rgb(255,248,41)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(255,248,41)" }}>
+						<Chat titulo={"Mensagens dos Usuários"} descricao={" "} style={{ height: '300px'}} name={sessionStorage.getItem('user')} />
+					</div>
+				</div>
 			</div>
 		)
 	}
