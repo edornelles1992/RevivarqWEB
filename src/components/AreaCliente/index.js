@@ -23,7 +23,7 @@ import { update } from '../../services/user/index.js';
 import TextField from '@material-ui/core/TextField';
 import { InputLabel, Checkbox, FormControlLabel, FormControl } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
-
+import Chat from '../../components/Chat/Chat'
 
 
 const styles = theme => ({
@@ -363,6 +363,11 @@ export default class SwitchListSecondary extends React.Component {
 							}
 						</Paper >
 					</div>
+				</div>
+				<div>
+					<div style={{ marginTop: 40, color: "rgb(255,248,41)", fontSize: 40, fontFamily: 'Playfair Display' }}>
+				<Chat name={sessionStorage.getItem('user')} />
+				</div>
 				</div>
 			</div>
 		)
