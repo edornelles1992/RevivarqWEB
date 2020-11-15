@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -18,10 +17,8 @@ import toMoneyConversion from 'helpers/NumberUtility';
 import { Search as SearchIcon } from '@material-ui/icons';
 import BlockIcon from '@material-ui/icons/Block';
 import { Button } from '@material-ui/core';
-import { any } from 'prop-types';
 import { update } from '../../services/user/index.js';
 import TextField from '@material-ui/core/TextField';
-import { InputLabel, Checkbox, FormControlLabel, FormControl } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
 import Chat from '../../components/Chat/Chat'
 
@@ -108,11 +105,24 @@ export default class SwitchListSecondary extends React.Component {
 		}
 		else {
 			showNotification(updateUser.data.message)
+			//FIX - Campos editaveis
+			var estado = this.state.trocaBotao
+			if (estado) {
+				this.setState({
+					trocaBotao: false,
+					abreEdicao: false,
+					disabled: false
+				})
+			}
+			else {
+				this.setState({
+					trocaBotao: true,
+					abreEdicao: true,
+					disabled: true
+				})
+			}
 			return true
-		}
-
-
-
+		}		
 	}
 
 	renderContent(reform, index) {
@@ -132,7 +142,7 @@ export default class SwitchListSecondary extends React.Component {
 				<TableCell align="right" style={{borderBottomRightRadius:"15px"}}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
 			</TableRow>
 		)
-	}
+	}	
 
 
 	handleClickvoltar() {
