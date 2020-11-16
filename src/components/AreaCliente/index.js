@@ -376,6 +376,7 @@ export default class SwitchListSecondary extends React.Component {
 				</div>
 				<div>
 					<div style={{ padding: 10, marginTop: 100, color: "rgb(255,248,41)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(255,248,41)" }}>
+						<h3>Chat</h3>
 						<Chat style={{ width: '300px', height: '330px'}}name={sessionStorage.getItem('user')} />
 					</div>
 				</div>
