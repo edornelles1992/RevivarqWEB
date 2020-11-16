@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatMessage'
+import { setWsHeartbeat } from "ws-heartbeat/client";
 
 const URL = 'ws://localhost:3030'
 
@@ -13,9 +14,14 @@ class Chat extends Component {
     }
 
     ws = new WebSocket(URL)
-
-
+    
     componentDidMount() {
+
+        setWsHeartbeat(this.ws, '{"kind":"ping"}', {
+            pingTimeout: 10000, // in 60 seconds, if no message accepted from server, close the connection.
+            pingInterval: 5000, // every 25 seconds, send a ping message to the server.
+        });
+        
         this.ws.onopen = () => {
             // on connecting, do nothing but log it to the console  
             console.log('connected')
@@ -46,6 +52,7 @@ class Chat extends Component {
 
     componentWillUnmount(){
         this.ws.close()
+        this.ws = null;
     }
 
     addMessage = message =>
@@ -81,11 +88,11 @@ class Chat extends Component {
             <div style={this.props.style}>
                 <div>
                     <label style={{ fontFamily: 'Playfair Display', fontWeight: 'bold' }} htmlFor="name">
-                        {this.state.status === "OCUPADO" ? "Estamos Offline no momento" : this.props.titulo || "Estamos online!"}
+                        {this.state.status === "OCUPADO" ? "Estamos Ocupadas no momento, Tente novamente mais tarde!" : this.props.titulo || "Estamos online!"}
                     </label>
                 </div>
                 <label style={{ fontSize: 12, fontFamily: 'Playfair Display', }} htmlFor="name">
-                    {this.state.status === "OCUPADO" ? "Envia um e-mail para atendimento@revivarq.com.br que responderemos o mais breve possivel ;)" : this.props.descricao || "Responderemos você assim que possível ;)"}
+                    {this.state.status === "OCUPADO" ? "Você também pode enviar um e-mail para atendimento@revivarq.com.br que responderemos o mais breve possivel ;)" : this.props.descricao || "Responderemos você assim que possível ;)"}
                 </label>
                 <div id={"scroll-chat"} style={this.props.chatBodySize || { height: '200px', overflow: "scroll", overflowX: "hidden" }}>
                     <div >
