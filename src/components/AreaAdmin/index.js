@@ -16,6 +16,8 @@ import { Constants } from '../../configs/constants';
 import { Search as SearchIcon } from '@material-ui/icons';
 import ReformaDetalhe from '../ReformaDetalhe';
 import Chat from '../../components/Chat/Chat'
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+import "./style.css"
 
 const styles = theme => ({
 	root: {
@@ -101,7 +103,7 @@ export default class AreaAdminComponent extends React.Component {
 					</Typography>
 				</div>
 				<Paper className={classes.root} style={{ margin: 60 }} >
-					<Table className={classes.table}>
+					<Table className={classes.table} id="table-to-xls">
 						<TableHead style={{ backgroundColor: "rgb(255,248,41)" }}>
 							<TableRow>
 								<TableCell align="left"><b>Nome Estabelecimento</b></TableCell>
@@ -118,6 +120,13 @@ export default class AreaAdminComponent extends React.Component {
 								{reforms.map((reform, index) => this.renderContent(reform, index))}
 							</TableBody>}
 					</Table>
+					<ReactHTMLTableToExcel
+						id="test-table-xls-button"
+						className="download-table-xls-button"
+						table="table-to-xls"
+						filename="tablexls"
+						sheet="tablexls"
+						buttonText="Exportar para Excel" />
 					{openedReformIndex !== -1 && <ReformaDetalhe reform={reforms[openedReformIndex]} closeDetail={this.closeDetail} tipoUsuario={0} />}
 					{!isLoading && reforms.length === 0 &&
 						<div style={{ minHeight: '100px', justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
@@ -127,9 +136,9 @@ export default class AreaAdminComponent extends React.Component {
 						</div>
 					}
 				</Paper >
-				<div style={{  display: 'flex', alignItems: 'center', justifyContent: "center", alignContent: "center"}}>
+				<div style={{ display: 'flex', alignItems: 'center', justifyContent: "center", alignContent: "center" }}>
 					<div style={{ width: "500px", padding: 10, color: "rgb(255,248,41)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(255,248,41)" }}>
-						<Chat titulo={"Mensagens dos Usuários"} descricao={" "} style={{ height: '300px'}} name={sessionStorage.getItem('user')} />
+						<Chat titulo={"Mensagens dos Usuários"} descricao={" "} style={{ height: '300px' }} name={sessionStorage.getItem('user')} />
 					</div>
 				</div>
 			</div>
