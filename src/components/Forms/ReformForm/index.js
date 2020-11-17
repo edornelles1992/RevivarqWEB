@@ -162,6 +162,11 @@ class ReformForm extends React.Component {
 	}
 
 	imgChange = (e) => {
+		if(this.state.file.length > 2) {
+			showNotification('Não é possível adicionar mais de 3 fotos','Limite de Fotos', 'danger')
+			return
+		}
+
 	//	console.log("ThunderCats")
 		let reader = new FileReader();
 		let file = e.target.files[0];
@@ -487,24 +492,24 @@ class ReformForm extends React.Component {
 
 					</div>
 
-					<Grid container spacing={3} style={{ display: "center", marginLeft: "-150px", marginTop: "21px", marginBottom: "15px" }}>
-						<Grid item xs={12} style={{marginRight:120}}>
+					<div style={{ display: "flex", marginLeft: "-150px", marginTop: "21px", marginBottom: "15px", height: "110px", alignItems: "center" }}>
+						<div>
 							<label class="custom-file-upload">
 								<input hidden style={{ display: 'flex-center', margin: 20 }} required="" type="file" accept="image/*" onChange={(e) => this.imgChange(e)}></input>
 								ADICIONAR FOTOS
 							</label>
-						</Grid>
-						<Grid item xs={12}>
+						</div>
+						<div style={{display: "flex"}}>
 							{
 								this.state.imagePreviewUrl.map((foto) => {
 									return <div style={{display: "flex"}}>
 										<img src={foto.foto} style={{ width: 70, height: 70, display: 'flex-center', margin: 20 }}></img>
-										<span style={{marginTop: "45px"}} onClick={(e) => this.deletarImg(foto)}>X</span>
+										<span style={{marginTop: "45px", cursor: "pointer"}} onClick={(e) => this.deletarImg(foto)}>X</span>
 									</div>
 								})
 							}
-						</Grid>
-					</Grid>
+						</div>
+					</div>
 				</Grid>
 
 				<Grid item xs={3} direction="column" className="reforma-form-radios-container" style={{marginLeft: "25px"}}>
