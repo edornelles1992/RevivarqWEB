@@ -136,7 +136,7 @@ export default class AreaAdminComponent extends React.Component {
 						</div>
 					}
 				</Paper >
-				<div style={{ display: 'flex', alignItems: 'center', justifyContent: "center", alignContent: "center" }}>
+				<div style={{ marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: "center", alignContent: "center" }}>
 					<div style={{ width: "500px", padding: 10, color: "rgb(0,0,0)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(233, 179, 61)" }}>
 					<h3>Chat</h3>
 						<Chat isAdmin={true} titulo={"Mensagens dos Usuários"} descricao={" "} style={{ height: '300px'}} name={sessionStorage.getItem('user')} />
