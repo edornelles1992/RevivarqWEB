@@ -68,3 +68,17 @@ display: flex;
 display: flex;
 margin-bottom: 12px;
 }
+
+
+.custom-file-upload{
+  border-radius: 4px;
+  display: inline-block;
+  padding: 6px 6px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(21, 38, 32);
+  width: 162px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 15px;
+}

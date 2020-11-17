@@ -273,7 +273,7 @@ class ReformForm extends React.Component {
 
 		return (
 
-			<Grid container spacing={3} className="reforma-container" style={{alignItems:'center'}}>
+			<Grid container spacing={3} className="reforma-container" style={{width: "750px", alignItems:'center', borderRadius: "10px"}}>
 				<Grid item xs={12} direction="column" style={{ textAlign:"center", marginLeft:-10,marginBottom:20}}>
 					<h1>{this.props.title}</h1>
 				</Grid>
@@ -285,7 +285,7 @@ class ReformForm extends React.Component {
 			</Grid>
 
 				<Grid item xs={3} direction="column" style={{display:"flex-end"}} className="reforma-form-inner-container">
-					<div className="reforma-form-inputs-container-top">
+					<div className="reforma-form-inputs-container-top" style={{marginLeft: "-168px"}}>
 						<InputLabel style={{ textAlign: 'center', fontSize: 16 }} htmlFor="demo-controlled-open-select">Informações Gerais</InputLabel>
 
 						<Typography style={{ color: 'black', fontFamily: 'Playfair Display', margin: 0 }}>
@@ -487,35 +487,19 @@ class ReformForm extends React.Component {
 
 					</div>
 
-					<Grid container spacing={3} style={{ display: "center" }}>
-						{this.state.abreFotos
-							?
-							<Grid item xs={12} style={{marginRight:120}}>
-								<Button variant="contained" onClick={(e) => this.abreFotos(e)}
-									style={{ color: 'white', backgroundColor: "rgb(21,38,32)", fontSize: 15, display: 'flex-center', marginTop: 20 }}>
-									Fechar
-										</Button>
-								<Typography style={{ color: 'black', fontSize: 20, display: 'flex-center' }}>
-
-									<input style={{ display: 'flex-center', margin: 20 }} required="" type="file" accept="image/*" onChange={(e) => this.imgChange(e)}></input>
-
-								</Typography>
-							</Grid>
-							:
-							<Grid item xs={12} style={{marginRight:120}}>
-
-								<Button variant="contained" onClick={(e) => this.abreFotos(e)}
-									style={{ color: 'white', backgroundColor: "rgb(21,38,32)", fontSize: 15, margin: 20, display: 'flex-center' }}>
-									Adicionar Fotos
-										</Button>
-							</Grid>
-						}
+					<Grid container spacing={3} style={{ display: "center", marginLeft: "-150px", marginTop: "21px", marginBottom: "15px" }}>
+						<Grid item xs={12} style={{marginRight:120}}>
+							<label class="custom-file-upload">
+								<input hidden style={{ display: 'flex-center', margin: 20 }} required="" type="file" accept="image/*" onChange={(e) => this.imgChange(e)}></input>
+								ADICIONAR FOTOS
+							</label>
+						</Grid>
 						<Grid item xs={12}>
 							{
 								this.state.imagePreviewUrl.map((foto) => {
-									return <div>
+									return <div style={{display: "flex"}}>
 										<img src={foto.foto} style={{ width: 70, height: 70, display: 'flex-center', margin: 20 }}></img>
-										<Button variant="contained" style={{ color: 'white', backgroundColor: "rgb(21,38,32)", display: "flex-center", marginBottom: 80 }} onClick={(e) => this.deletarImg(foto)}>Remover</Button>
+										<span style={{marginTop: "45px"}} onClick={(e) => this.deletarImg(foto)}>X</span>
 									</div>
 								})
 							}
@@ -523,7 +507,7 @@ class ReformForm extends React.Component {
 					</Grid>
 				</Grid>
 
-				<Grid item xs={3} direction="column" className="reforma-form-radios-container">
+				<Grid item xs={3} direction="column" className="reforma-form-radios-container" style={{marginLeft: "25px"}}>
 					<div>
 						<Grid item xs={12}>
 							<InputLabel style={{ margin: 20 }} htmlFor="demo-controlled-open-select">Itens da Reforma</InputLabel>
@@ -610,9 +594,9 @@ class ReformForm extends React.Component {
 
 					<Grid item xs={12}>
 						<Button onClick={() => this.handleClickOpen()}
-							variant="contained" style={{ color: 'white', backgroundColor: "rgb(21,38,32)", fontSize: 25, margin: 20 }} >
+							variant="contained" style={{ width: "174px", color: 'white', backgroundColor: "rgb(21,38,32)", fontSize: 15, margin: 20, marginTop: "15px", marginLeft: "10px" }} >
 							Encaminhar
-								</Button>
+						</Button>
 					</Grid>
 					<div style={{  }}>
 
