@@ -56,13 +56,13 @@ export default class SwitchListSecondary extends React.Component {
 		return (
 			<div>
 				<div style={{ display: 'flex', justifyContent: 'left', marginLeft: 0, marginBottom: -60, marginTop: 30 }}>
-					<Typography variant="overline" style={{ marginLeft: 30, marginTop: 10, color: "rgb(255,248,41)", fontSize: 35, fontFamily: 'Playfair Display' }} gutterBottom>
+					<Typography variant="overline" style={{ marginLeft: 30, marginTop: 10, color: "rgb(178,190,120)", fontSize: 35, fontFamily: 'Playfair Display' }} gutterBottom>
 						Solicitações de Orçamento
 					</Typography>
 				</div>
 				<Paper className={classes.root} style={{ margin: 60 }} >
 						<Table className={classes.table}>
-							<TableHead style={{ backgroundColor: "rgb(255,248,41)" }}>
+							<TableHead style={{ backgroundColor: "rgb(178,190,120)" }}>
 								<TableRow>
 									<TableCell>ID #</TableCell>
 									<TableCell align="left"><b>Nome Usuário</b></TableCell>

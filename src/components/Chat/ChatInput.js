@@ -27,7 +27,7 @@ class ChatInput extends Component {
           value={this.state.message}
           onChange={e => this.setState({ message: e.target.value })}
         />
-        <input style={{ marginTop: 30, fontFamily: 'Playfair Display', backgroundColor:'rgb(255,248,41)'}}type="submit" value={'Enviar'} />
+        <input style={{ marginTop: 30, fontFamily: 'Playfair Display', backgroundColor:'rgb(255,255,255)'}}type="submit" value={'Enviar'} />
       </form>
     )
   }

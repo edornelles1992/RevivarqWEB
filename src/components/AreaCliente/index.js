@@ -138,8 +138,8 @@ export default class SwitchListSecondary extends React.Component {
 				<TableCell align="right">R$ {toMoneyConversion(reform.budgetLimit)}</TableCell>
 				<TableCell align="right">{reform.establishmentType}</TableCell>
 				<TableCell align="right">{reform.status}</TableCell>
-				<TableCell align="right"><SearchIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.setState({ openedReformIndex: index })} /></TableCell>
-				<TableCell align="right" style={{ borderBottomRightRadius: "15px" }}><EditIcon style={{ cursor: 'pointer', color: 'rgb(21,38,32)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
+				<TableCell align="right"><SearchIcon style={{ cursor: 'pointer', color: 'rgb(0,0,0)' }} onClick={(e) => this.setState({ openedReformIndex: index })} /></TableCell>
+				<TableCell align="right" style={{ borderBottomRightRadius: "15px" }}><EditIcon style={{ cursor: 'pointer', color: 'rgb(0,0,0)' }} onClick={(e) => this.handleClick(reform)} /></TableCell>
 			</TableRow>
 		)
 	}
@@ -200,13 +200,13 @@ export default class SwitchListSecondary extends React.Component {
 			<div style={{ display: 'inline-flex' }}>
 				<div style={{ display: 'flex-start ' }}>
 					<div style={{ display: 'flex', justifyContent: 'center', marginLeft: 60, marginBottom: -60, marginTop: 30, marginRight: 50 }}>
-						<Typography variant="overline" style={{ marginLeft: 30, marginTop: 10, color: "rgb(255,248,41)", fontSize: 40, fontFamily: 'Playfair Display' }} gutterBottom>
+						<Typography variant="overline" style={{ marginLeft: 30, marginTop: 10, color: "rgb(0,0,0)", fontSize: 40, fontFamily: 'Playfair Display' }} gutterBottom>
 							Perfil
 					</Typography>
 					</div>
 					<Paper className={classes.root} style={{ margin: 60, borderRadius: "15px" }} >
 						<Table className={classes.table} style={{ 'border-collapse': 'separate', 'border-radius': '15px' }}>
-							<TableHead style={{ backgroundColor: "rgb(255,248,41)" }}>
+							<TableHead style={{ backgroundColor: "rgb(233, 179, 61)" }}>
 								<TableRow>
 									<TableCell style={{ borderTopLeftRadius: "15px", fontSize: "20px" }}>Detalhes do Usuário</TableCell>
 									<TableCell style={{ alignItems: 'center' }} style={{ borderTopRightRadius: "15px" }}>
@@ -330,7 +330,7 @@ export default class SwitchListSecondary extends React.Component {
 									<TableCell style={{ borderBottomLeftRadius: "15px" }}>
 										{this.state.abreEdicao
 											?
-											<Button type='submit' style={{ color: 'white', backgroundColor: "rgb(21,38,32)" }} onClick={this.handleSubmit}>Atualizar Dados</Button>
+											<Button type='submit' style={{ color: 'white', backgroundColor: "rgb(0,0,0)" }} onClick={this.handleSubmit}>Atualizar Dados</Button>
 											:
 											<div></div>
 										}
@@ -342,14 +342,15 @@ export default class SwitchListSecondary extends React.Component {
 				</div>
 				<div style={{ display: 'block', marginLeft: 0, marginBottom: -0, marginTop: 0 }}>
 					<div>
-						<Typography variant="overline" style={{ marginTop: 40, color: "rgb(255,248,41)", fontSize: 40, fontFamily: 'Playfair Display' }}>
-							Solicitações de Orçamento
+						<Typography variant="overline" style={{ marginTop: 40, fontSize: 48, fontFamily: 'Playfair Display' }}>
+							<b>Solicitações de Orçamento</b>
 						</Typography>
+						<br></br>
 					</div>
 					<div className={classes.tableWrapper}>
 						<Paper className={classes.root} style={{ margin: 10, borderRadius: "15px" }} >
 							<Table className={classes.table} style={{ 'border-collapse': 'separate', 'border-radius': '15px' }}>
-								<TableHead style={{ backgroundColor: "rgb(255,248,41)" }}>
+								<TableHead style={{ backgroundColor: "rgb(233, 179, 61)" }}>
 									<TableRow>
 										<TableCell style={{ fontSize: 15 }} className="table-row"><b>Nome Estabelecimento</b></TableCell>
 										<TableCell style={{ fontSize: 15 }} align="left"><b>Orçamento Limite</b></TableCell> {/* estava Nome Solicitação, troquei para orçamento limite pois n entendi qual campo era esse e n tem nenhum parecido que volte nessa chamada */}
@@ -375,7 +376,7 @@ export default class SwitchListSecondary extends React.Component {
 					</div>
 				</div>
 				<div>
-					<div style={{ padding: 10, marginTop: 100, color: "rgb(255,248,41)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(255,248,41)" }}>
+					<div style={{ padding: 10, marginTop: 100, color: "rgb(0,0,0)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(233, 179, 61)" }}>
 						<h3>Chat</h3>
 						<Chat style={{ width: '300px', height: '330px'}}name={sessionStorage.getItem('user')} />
 					</div>

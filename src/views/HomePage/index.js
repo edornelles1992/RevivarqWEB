@@ -49,8 +49,8 @@ class HomePage extends Page { // Uma das varias maneiras de proteger uma rota é
 
 					<Grid item xs={12} className="img" justify='center' style={{ height: 700, alignItems: 'center', objectFit: 'nonen' }}>
 
-						<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
-							<Typography variant="overline" className="txtIni" style={{ fontSize: 60, color: 'white', fontFamily:'Playfair Display' }} gutterBottom>
+						<div style={{ display: 'flex', color: 'rgb(178,190,120)', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
+							<Typography variant="overline" className="txtIni" style={{ fontSize: 60,  fontFamily:'Playfair Display' }} gutterBottom>
 								Renovando seu Negócio
 							</Typography>
 						</div>
@@ -58,24 +58,24 @@ class HomePage extends Page { // Uma das varias maneiras de proteger uma rota é
 					</Grid>
 
 					<Grid item xs={6} >
-						<Typography style={{ textAlign: 'right', marginTop: 80, marginRight: 30, fontSize: 60, fontWeight: 'bold', color: 'white' , fontFamily:'Playfair Display'}}>
+						<Typography style={{textShadow:"3px 2px", textAlign: 'right', color: 'rgb(3, 120, 3)', marginTop: 80, marginRight: 30, fontSize: 60, fontWeight: 'bold', fontFamily:'Playfair Display'}}>
 							QUEM
 									<br></br>
 							SOMOS
 						</Typography>
 					</Grid>
 
-					<Grid item xs={6} style={{ textAlign: 'left', justifyContent: 'left', marginTop: 83, fontSize: 20 }}>
+					<Grid item xs={6} style={{ color: 'rgb(80, 125, 5)', textAlign: 'left', justifyContent: 'left', marginTop: 83, fontSize: 20 }}>
 
-						<Typography variant="overline" display="block" style={{ textAlign: 'left', marginLeft: 30, marginRight: 260, marginTop: 15, fontSize: 20, color: 'rgb(255,255,255)', fontFamily:'Playfair Display' }} gutterBottom >
-							Somos uma empresa que oferece <b style={{ color: 'rgb(255,248,41)' }}>serviços personalizados</b> de arquitetura e design	para transformar o seu negócio <b style={{ color: 'rgb(255,248,41)' }}>cabendo no seu bolso</b>
+						<Typography variant="overline" display="block" style={{ textAlign: 'left', marginLeft: 30, marginRight: 260, marginTop: 15, fontSize: 20  , fontFamily:'Playfair Display' }} gutterBottom >
+							Somos uma empresa que oferece <b >serviços personalizados</b> de arquitetura e design	para transformar o seu negócio <b >cabendo no seu bolso</b>
 						</Typography>
 
 					</Grid>
 
 					<Grid item xs={12} style={{ marginLeft: 60, marginRight: 60, marginTop: 60 }}>
 
-						<Divider variant="middle" style={{ backgroundColor: 'rgb(255,248,41)' }} />
+						<Divider variant="middle" style={{ backgroundColor: 'rgb(80, 125, 5)' }} />
 
 					</Grid>
 
@@ -91,15 +91,15 @@ class HomePage extends Page { // Uma das varias maneiras de proteger uma rota é
 
 					<Grid item sm={3} xs={12} style={{ marginLeft: -50 }}>
 
-						<Typography variant="overline" display="block" style={{ textAlign: 'left', marginTop: 100, fontSize: 20, color: 'rgb(255,255,255)', fontWeight: 'bold',fontFamily:'Playfair Display' }} gutterBottom>
+						<Typography variant="overline" display="block" style={{ color: 'rgb(200, 140, 50)', textAlign: 'left', marginTop: 100, fontSize: 20  , fontWeight: 'bold',fontFamily:'Playfair Display' }} gutterBottom>
 							Carolina Santos
 						</Typography>
 
-						<Typography variant="overline" display="block" style={{ textAlign: 'left', fontSize: 20, color: 'rgb(255,248,41)', fontWeight: 'bold',fontFamily:'Playfair Display' }} gutterBottom>
+						<Typography variant="overline" display="block" style={{ color: 'rgb(3, 109, 3)',textAlign: 'left', fontSize: 20,  fontWeight: 'bold',fontFamily:'Playfair Display' }} gutterBottom>
 							Fundadora
 						</Typography>
 
-						<Typography variant="overline" display="block" style={{ textAlign: 'left', marginTop: 15, fontSize: 20, color: 'rgb(255,255,255)', letterSpacing:0.5, fontFamily:'Playfair Display' }} gutterBottom>
+						<Typography variant="overline" display="block" style={{ color: 'rgb(80, 125, 5)',textAlign: 'left', marginTop: 15, fontSize: 20  , letterSpacing:0.5, fontFamily:'Playfair Display' }} gutterBottom>
 							Oi gente! Sou a Carol, uma das arquitetas inquietas da Revivarq! Me formei em Arquitetura e Urbanismo no ano de 2018, na PUCRS.
 							Tenho experiência com projetos comerciais, administrativos e licenciamentos.
 							Adoro ver as mudanças que a arquitetura pode trazer para as pessoas, pessoal e profissionalmente. Acredito que as mudanças são muito importantes pra que o futuro seja significativo.
@@ -120,15 +120,15 @@ class HomePage extends Page { // Uma das varias maneiras de proteger uma rota é
 
 					<Grid item xs={12} sm={3} style={{ marginLeft: -50 }}>
 
-						<Typography variant="overline" display="block" style={{ textAlign: 'left', marginTop: 100, fontSize: 20, color: 'rgb(255,255,255)', fontWeight: 'bold', fontFamily:'Playfair Display' }} gutterBottom>
+						<Typography variant="overline" display="block" style={{ color: 'rgb(200, 140, 50)',textAlign: 'left', marginTop: 100, fontSize: 20  , fontWeight: 'bold', fontFamily:'Playfair Display' }} gutterBottom>
 							Vanessa Moreira
 						</Typography>
 
-						<Typography variant="overline" display="block" style={{ textAlign: 'left', fontSize: 20, color: 'rgb(255,248,41)', fontWeight: 'bold', fontFamily:'Playfair Display' }} gutterBottom>
+						<Typography variant="overline" display="block" style={{ color: 'rgb(3, 109, 3)',textAlign: 'left', fontSize: 20,  fontWeight: 'bold', fontFamily:'Playfair Display' }} gutterBottom>
 							Fundadora
 						</Typography>
 
-						<Typography variant="overline" display="block" style={{ textAlign: 'left', marginTop: 15, fontSize: 20, color: 'rgb(255,255,255)', letterSpacing:0.5, fontFamily:'Playfair Display' }} gutterBottom>
+						<Typography variant="overline" display="block" style={{ color: 'rgb(80, 120, 5)',textAlign: 'left', marginTop: 15, fontSize: 20  , letterSpacing:0.5, fontFamily:'Playfair Display' }} gutterBottom>
 							E aí, tudo bacana? Eu sou a Vanessa, arquiteta formada pela PUCRS em 2018 e acredito na desmistificação e democratização da arquitetura.
 							Tenho uma trajetória focada no ramo de arquitetura comercial, especialmente trabalhando com grande redes varejistas no cenário nacional.
 							Entretanto, acredito que olhar para o empreendedor de bairro e oferecer a ele uma oportunidade de planejamento e reconfiguração de seu espaço de trabalho propicia um benefício para além de seu negócio,
@@ -139,14 +139,14 @@ class HomePage extends Page { // Uma das varias maneiras de proteger uma rota é
 
 					<Grid item xs={12} style={{ marginLeft: 60, marginRight: 60, marginTop: 60 }}>
 
-						<Divider variant="middle" style={{ backgroundColor: 'rgb(255,248,41)' }} />
+					<Divider variant="middle" style={{ backgroundColor: 'rgb(80, 120, 5)' }} />
 
 					</Grid>
 
 					<Grid item xs={12} style={{ marginTop: 80 }}>
 
-						<Typography style={{ textAlign: 'center', marginBottom: 30, fontSize: 40, fontWeight: 'bold', color: 'white', fontFamily:'Playfair Display' }}>
-							Fique ligado no nosso <b style={{ color: 'rgb(255,248,41)' }}>Instagram!</b>
+						<Typography style={{ color: 'rgb(3, 109, 0)',textAlign: 'center', marginBottom: 30, fontSize: 40, fontWeight: 'bold',  fontFamily:'Playfair Display' }}>
+							Fique ligado no nosso <b >Instagram!</b>
 						</Typography>
 
 						<InstaGallery />
@@ -155,13 +155,13 @@ class HomePage extends Page { // Uma das varias maneiras de proteger uma rota é
 
 					<Grid item xs={12} style={{ marginTop: 30, marginBottom: 80 }}>
 
-						<Typography style={{ textAlign: 'center', marginBottom: 20, marginLeft: 100, marginRight: 100, fontSize: 20, color: 'white',fontFamily:'Playfair Display' }}>
+						<Typography style={{ color: 'rgb(80, 120, 5)',textAlign: 'center', marginBottom: 20, marginLeft: 100, marginRight: 100, fontSize: 20, fontFamily:'Playfair Display' }}>
 							Atualizamos nosso instagram diariamente com dicas de arquitetura, vídeos de montagem de projetos,
 							notícias sobre arquitetura e tecnologia e portifólio dos projetos realizados
 						</Typography>
 
-						<Button style={{ color: 'rgb(255,248,41)', fontFamily:'Playfair Display' }} onClick={() => { window.open('https://www.instagram.com/revivarq') }} className={classes.button}>
-							Siga nosso Instagram!
+						<Button style={{  fontFamily:'Playfair Display',color: 'rgb(80, 120, 5)' }} onClick={() => { window.open('https://www.instagram.com/revivarq') }} className={classes.button}>
+							<b>Siga nosso Instagram!</b>
       					</Button>
 
 					</Grid>

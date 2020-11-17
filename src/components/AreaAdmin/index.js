@@ -98,13 +98,13 @@ export default class AreaAdminComponent extends React.Component {
 		return (
 			<div>
 				<div style={{ display: 'flex', justifyContent: 'left', marginLeft: 60, marginBottom: -60, marginTop: 30 }}>
-					<Typography variant="overline" style={{ marginLeft: 30, marginTop: 10, color: "rgb(255,248,41)", fontSize: 35, fontFamily: 'Playfair Display' }} gutterBottom>
+					<Typography variant="overline" style={{ marginLeft: 30, marginTop: 10, color: "rgb(0,0,0)", fontSize: 35, fontFamily: 'Playfair Display' }} gutterBottom>
 						Solicitações de Orçamento
 					</Typography>
 				</div>
 				<Paper className={classes.root} style={{ margin: 60 }} >
 					<Table className={classes.table} id="table-to-xls">
-						<TableHead style={{ backgroundColor: "rgb(255,248,41)" }}>
+						<TableHead style={{ backgroundColor: "rgb(233, 179, 61)" }}>
 							<TableRow>
 								<TableCell align="left"><b>Nome Estabelecimento</b></TableCell>
 								<TableCell align="left"><b>Nome Usuário</b></TableCell>
@@ -137,7 +137,7 @@ export default class AreaAdminComponent extends React.Component {
 					}
 				</Paper >
 				<div style={{ display: 'flex', alignItems: 'center', justifyContent: "center", alignContent: "center" }}>
-					<div style={{ width: "500px", padding: 10, color: "rgb(255,248,41)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(255,248,41)" }}>
+					<div style={{ width: "500px", padding: 10, color: "rgb(0,0,0)", fontSize: 20, fontFamily: 'Playfair Display', border: "1px solid rgb(233, 179, 61)" }}>
 					<h3>Chat</h3>
 						<Chat isAdmin={true} titulo={"Mensagens dos Usuários"} descricao={" "} style={{ height: '300px'}} name={sessionStorage.getItem('user')} />
 					</div>
