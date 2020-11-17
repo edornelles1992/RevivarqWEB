@@ -9018,6 +9018,13 @@ react-grid-gallery@^0.5.5:
     prop-types "^15.5.8"
     react-images "^0.5.16"
 
+react-html-table-to-excel@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-html-table-to-excel/-/react-html-table-to-excel-2.0.0.tgz#c5b183121e4a07b47ce936337150dabb60f6012e"
+  integrity sha1-xbGDEh5KB7R86TYzcVDau2D2AS4=
+  dependencies:
+    prop-types "^15.5.10"
+
 react-images@^0.5.16:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/react-images/-/react-images-0.5.19.tgz#9339570029e065f9f28a19f03fdb5d9d5aa109d3"
@@ -11346,6 +11353,20 @@ write@^0.2.1:
   integrity sha1-X8A4KOJkzqP+kUVUdvejxWbLB1c=
   dependencies:
     mkdirp "^0.5.1"
+
+ws-heartbeat@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ws-heartbeat/-/ws-heartbeat-1.1.0.tgz#7989331381ba5a432092ee6093fa081199549d8f"
+  integrity sha512-OM24BT52L58vHd9BkKanurOlAKYZCEDM917GVTqQEAlU/bXkJIHJOqL5GPWEcKd+R5frla26BDSlRKrilhiImA==
+  dependencies:
+    ws "6"
+
+ws@6:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.1.tgz#442fdf0a47ed64f59b6a5d8ff130f4748ed524fb"
+  integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
+  dependencies:
+    async-limiter "~1.0.0"
 
 ws@^5.2.0:
   version "5.2.2"

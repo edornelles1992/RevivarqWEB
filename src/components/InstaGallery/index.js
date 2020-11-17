@@ -41,7 +41,7 @@ class InstaGallery extends Component {
 
 	getGallery = async () => {
 		var response = await get();
-		var imagens = response.data;
+		var imagens = response.data || [];
 		var aux = this.state.fotos;
 		console.log(imagens)
 		for (var i = 0; i < imagens.length; i++) {
